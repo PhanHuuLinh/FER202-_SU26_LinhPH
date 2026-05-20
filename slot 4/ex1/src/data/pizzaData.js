@@ -100,3 +100,5 @@ const pizzaList = [
         tag: 'Sale'
     }
 ];
+
+export default pizzaList;

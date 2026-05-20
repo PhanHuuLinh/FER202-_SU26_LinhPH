@@ -1,12 +1,16 @@
 import React from "react";
 function Footer({id ,name, email, githublink}) {
     return(
-        <Footer>
-            <p>&copy; ID12345.</p>
-            <p>Name:LinhPH</p>
-            <P>Email: benphilip11234@gmail.com</P>
-            <p><a href="https://github.com/fudn-traltb-su26/n-p-b-i-exercise1-PhanHuuLinh.git" target="_blank" rel="noopener noreferrer">Github Profile</a> </p>
-        </Footer>
+        <footer className="py-4 mt-5 text-center border-top bg-white text-muted">
+            <p className="mb-1">&copy; ID: {id || "DE191102"}.</p>
+            <p className="mb-1">Name: {name || "LinhPH"}</p>
+            <p className="mb-1">Email: {email || "benphilip11234@gmail.com"}</p>
+            <p className="mb-0">
+                <a href={githublink || "https://github.com/PhanHuuLinh/FER202-_SU26_LinhPH"} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-danger fw-semibold">
+                    Github Profile
+                </a>
+            </p>
+        </footer>
     );
 }
 
