@@ -5,6 +5,9 @@ import pizzaList from '../data/pizzaData';
 function PizzaList() {
     return (
         <div className="container my-5">
+            <div className="text-center mb-5">
+                <h2 className="fw-bold section-title">Our Special Pizza Menu</h2>
+            </div>
             <div className="row g-4">
                 {pizzaList.map((pizza) => (
                     <div className="col-12 col-md-6 col-lg-4 d-flex" key={pizza.id}>

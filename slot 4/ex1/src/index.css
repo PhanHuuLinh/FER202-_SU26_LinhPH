@@ -82,3 +82,150 @@ body {
   border-radius: 10px;
 }
 
+/* Custom Premium Carousel Styles */
+.custom-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 3.5rem auto;
+  width: 100%;
+}
+
+.custom-carousel .carousel-item {
+  height: auto;
+  aspect-ratio: 19 / 6;
+  background-color: #0f172a;
+}
+
+.custom-carousel .carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scale(1.0);
+}
+
+.custom-carousel .carousel-item.active .carousel-img {
+  transform: scale(1.05);
+}
+
+/* Dynamic Hover Lift Interactions */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 70%, rgba(15, 23, 42, 0) 100%);
+  padding: 3.5rem 3rem 2.5rem 3rem;
+  color: #fff;
+  z-index: 10;
+}
+
+.custom-carousel-caption h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #fff, #f1f5f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.custom-carousel-caption p {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  max-width: 80%;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.custom-carousel-control {
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 50% !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  opacity: 0.7;
+}
+
+.custom-carousel-control:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.custom-carousel-indicators {
+  bottom: 1.5rem !important;
+  z-index: 15;
+}
+
+.custom-carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin: 0 6px !important;
+  padding: 0 !important;
+}
+
+.custom-carousel-indicators button.active {
+  background-color: #ff385c !important;
+  transform: scale(1.25);
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+@media (max-width: 768px) {
+  .custom-carousel .carousel-item {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .custom-carousel-caption {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .custom-carousel-caption h3 {
+    font-size: 1.5rem;
+  }
+
+  .custom-carousel-caption p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .custom-carousel-control {
+    display: none !important;
+  }
+}
+
+/* Reusable Modal Animations */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
