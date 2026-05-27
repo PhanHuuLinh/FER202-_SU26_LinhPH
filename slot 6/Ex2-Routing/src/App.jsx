@@ -6,6 +6,7 @@ import PostList from './pages/PostList';
 import PostDetail from './pages/PostDetail';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import RegistrationForm from './pages/RegistrationForm';
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
 
       {/* Định nghĩa các route */}
       <Routes>
-        <Route path='/'          element={<Home />} />
-        <Route path='/posts'     element={<PostList />} />
-        <Route path='/posts/:id' element={<PostDetail />} />
-        <Route path='/about'     element={<About />} />
-        <Route path='*'          element={<NotFound />} />
+        <Route path='/'              element={<RegistrationForm />} />
+        <Route path='/home'          element={<Home />} />
+        <Route path='/posts'         element={<PostList />} />
+        <Route path='/posts/:id'     element={<PostDetail />} />
+        <Route path='/about'         element={<About />} />
+        <Route path='/registration'  element={<RegistrationForm />} />
+        <Route path='*'              element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
